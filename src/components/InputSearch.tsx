@@ -4,8 +4,10 @@ import { useInputStore } from "@/store/inputStore"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod';
 import { schemaInput } from "@/schema/input";
+import { ToastContainer } from "react-toastify";
+import { useFormErrors } from "@/hooks/useFormErrors";
 
-interface Input {
+export interface Input {
     search: string
 }
 
@@ -13,6 +15,8 @@ export const InputSearch = () => {
 
     const searchWord = useInputStore(state => state.setWord)
     const { register, handleSubmit, formState: { errors }, } = useForm<Input>({ resolver: zodResolver(schemaInput) })
+
+    useFormErrors(errors)
 
     const onSubmit: SubmitHandler<Input> = (data) => {
         searchWord(data.search)
@@ -36,6 +40,7 @@ export const InputSearch = () => {
                     </svg>
                 </button>
             </div>
+            <ToastContainer />
         </form>
     )
 }

@@ -40,9 +40,9 @@ export const SelectFont = () => {
             <button
                 className="cursor-pointer w-auto bg-white dark:bg-black rounded-lg py-4 text-left flex justify-between items-center gap-4 outline-0"
             >
-                <span className="text-black font-bold text-sm dark:text-white md:text-lg">{font}</span>
+                <span className="text-black font-bold text-sm dark:text-white md:text-lg select-none">{font}</span>
                 <IconArrow className={`w-5 text-black dark:text-white h-5 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
-                <span className="text-[#757575]">|</span>
+                <span className="text-[#757575] select-none">|</span>
             </button>
 
             {isOpen && (

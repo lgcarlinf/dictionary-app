@@ -1,0 +1,49 @@
+.playButton{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    &:disabled {
+        g {
+            fill: #757575;
+        }
+
+        &:hover {
+            circle {
+                opacity: .25
+            }
+
+            path {
+                fill: #4a4a4a;
+            }
+        }
+    }
+
+    svg {
+        width: 48px;
+
+        g {
+            fill: #A445ED;
+        }
+
+        circle {
+            opacity: .25;
+        }
+
+        &:hover {
+            circle {
+                opacity: 1;
+            }
+
+            path {
+                fill: white;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 6px;
+            width: 75px;
+        }
+    }
+}
