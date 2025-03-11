@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <Providers>
       <div className={`font-${fontFamily} ${darkStyle()}`}>
-        <div className="bg-white dark:bg-black h-auto w-full flex flex-col items-center p-6">
+        <div className="bg-white dark:bg-black w-full flex flex-col items-center p-6 min-h-screen " >
           <main className="w-full max-w-3xl flex flex-col gap-6 md:p-12">
             <Menu handleOpen={handleOpen} />
             <InputSearch />
