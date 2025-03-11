@@ -5,13 +5,16 @@
     padding: 0;
 
     &:disabled {
+        .g {
+            fill: #757575;
+        }
 
         &:hover {
-            circle {
+            .circle {
                 opacity: .25
             }
 
-            path {
+            .path {
                 fill: #4a4a4a;
             }
         }
@@ -20,17 +23,20 @@
     svg {
         width: 48px;
 
+        .g {
+            fill: #A445ED;
+        }
 
-        circle {
+        .circle {
             opacity: .25;
         }
 
         &:hover {
-            circle {
+            .circle {
                 opacity: 1;
             }
 
-            path {
+            .path {
                 fill: white;
             }
         }
